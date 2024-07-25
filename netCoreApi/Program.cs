@@ -7,16 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<NetCoreApiDb>(opt => opt.UseInMemoryDatabase("NetCoreApiList"));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-
 // Configure Swagger middleware
 // Enables the API Explorer, which is a service that provides metadata about the HTTP API. The API Explorer is used by Swagger to generate the Swagger document.
 builder.Services.AddEndpointsApiExplorer();
-
 // Adds the Swagger OpenAPI document generator to the application services and configures it to provide more information about the API, such as its title and version.
 builder.Services.AddOpenApiDocument(config =>
 {
-    config.DocumentName = "TodoAPI";
-    config.Title = "TodoAPI v1";
+    config.DocumentName = "NetCoreApiAPI";
+    config.Title = "NetCoreApiAPI v1";
     config.Version = "v1";
 });
 
@@ -31,19 +29,19 @@ if (app.Environment.IsDevelopment())
     app.UseOpenApi();
     app.UseSwaggerUi(config =>
     {
-        config.DocumentTitle = "TodoAPI";
+        config.DocumentTitle = "NetCoreApiAPI";
         config.Path = "/swagger";
         config.DocumentPath = "/swagger/{documentName}/swagger.json";
         config.DocExpansion = "list";
     });
 }
 
+var NetCoreApiItems = app.MapGroup("/NetCoreApiitems");
 
-
-app.MapGet("/NetCoreApiitems", async (NetCoreApiDb db) =>
+NetCoreApiItems.MapGet("/", async (NetCoreApiDb db) =>
     await db.NetCoreApis.ToListAsync());
 
-app.MapGet("/NetCoreApiitems/complete", async (NetCoreApiDb db) =>
+NetCoreApiItems.MapGet("/complete", async (NetCoreApiDb db) =>
     await db.NetCoreApis.Where(t => t.IsComplete).ToListAsync());
 
 
@@ -55,13 +53,13 @@ app.MapGet("/NetCoreApiitems/complete", async (NetCoreApiDb db) =>
 // For example, GET /todoitems/{id} can return two different status values:
 // If no item matches the requested ID, the method returns a 404 status NotFound error code.
 // Otherwise, the method returns 200 with a JSON response body. Returning item results in an HTTP 200 response.
-app.MapGet("/NetCoreApiitems/{id}", async (int id, NetCoreApiDb db) =>
+NetCoreApiItems.MapGet("/{id}", async (int id, NetCoreApiDb db) =>
     await db.NetCoreApis.FindAsync(id)
         is NetCoreApi NetCoreApi
             ? Results.Ok(NetCoreApi)
             : Results.NotFound());
 
-app.MapPost("/NetCoreApiitems", async (NetCoreApi NetCoreApi, NetCoreApiDb db) =>
+NetCoreApiItems.MapPost("/", async (NetCoreApi NetCoreApi, NetCoreApiDb db) =>
 {
     db.NetCoreApis.Add(NetCoreApi);
     await db.SaveChangesAsync();
@@ -74,7 +72,7 @@ app.MapPost("/NetCoreApiitems", async (NetCoreApi NetCoreApi, NetCoreApiDb db) =
 // A successful response returns 204 (No Content).
 //  According to the HTTP specification, a PUT request requires the client to send the entire updated entity, not just the changes. 
 // To support partial updates, use HTTP PATCH.
-app.MapPut("/NetCoreApiitems/{id}", async (int id, NetCoreApi inputNetCoreApi, NetCoreApiDb db) =>
+NetCoreApiItems.MapPut("/{id}", async (int id, NetCoreApi inputNetCoreApi, NetCoreApiDb db) =>
 {
     var NetCoreApi = await db.NetCoreApis.FindAsync(id);
 
@@ -88,7 +86,7 @@ app.MapPut("/NetCoreApiitems/{id}", async (int id, NetCoreApi inputNetCoreApi, N
     return Results.NoContent();
 });
 
-app.MapDelete("/NetCoreApiitems/{id}", async (int id, NetCoreApiDb db) =>
+NetCoreApiItems.MapDelete("/{id}", async (int id, NetCoreApiDb db) =>
 {
     if (await db.NetCoreApis.FindAsync(id) is NetCoreApi NetCoreApi)
     {
@@ -99,6 +97,7 @@ app.MapDelete("/NetCoreApiitems/{id}", async (int id, NetCoreApiDb db) =>
 
     return Results.NotFound();
 });
+
 
 // http://localhost:5143/swagger/index.html
 
