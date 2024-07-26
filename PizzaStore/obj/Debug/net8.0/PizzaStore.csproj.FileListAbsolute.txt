@@ -24,3 +24,10 @@ C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\refi
 C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.pdb
 C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.genruntimeconfig.cache
 C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\ref\PizzaStore.dll
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.csproj.AssemblyReference.cache
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.csproj.Up2Date
