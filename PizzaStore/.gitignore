@@ -1,0 +1,69 @@
+# Archivos de configuración del sistema
+*.user
+*.userosx
+*.suo
+*.sln.docstates
+
+# Archivos binarios generados por la construcción
+/bin/
+/obj/
+
+# Archivos de paquetes
+*.nupkg
+*.snupkg
+
+# Archivos y directorios de NuGet
+.nuget/
+*.nupkg
+*.snupkg
+
+# Archivos de configuración de Rider
+.idea/
+
+# Archivos de configuración de Visual Studio Code
+.vscode/
+
+# Archivos de caché
+*.cache
+*.log
+
+# Archivos de configuración de entorno
+*.env
+
+# Archivos de compilación de ASP.NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de ejecución y compilación local
+*.dll
+*.exe
+*.pdb
+*.dbmdl
+
+# Archivos de backup y temporales
+*.bak
+*.tmp
+*.swp
+
+# Archivos de Visual Studio
+*.csproj.user
+*.vbproj.user
+*.dbmdl
+
+# Archivos y directorios generados por la construcción
+*.build
+*.tmp
+*.swp
+*.log
+*.dmp
+
+# Archivos de configuración de JetBrains Rider
+.idea/
+
+# Archivos de configuración de OS X
+*.DS_Store
+
+# Archivos de configuración de Windows
+Thumbs.db
+Desktop.ini

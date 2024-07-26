@@ -31,3 +31,6 @@ C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Swas
 C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.csproj.AssemblyReference.cache
 C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\obj\Debug\net8.0\PizzaStore.csproj.Up2Date
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Skynet\Documents\DESARROLLO\netCoreApi\PizzaStore\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
